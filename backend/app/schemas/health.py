@@ -5,5 +5,6 @@ class HealthResponse(BaseModel):
     model_config = ConfigDict(frozen=True)
 
     status: str
-    service: str
-    environment: str
+    shioaji_connected: bool
+    redis_connected: bool
+    database_connected: bool

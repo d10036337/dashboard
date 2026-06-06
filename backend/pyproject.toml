@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ttx-trader-backend"
-version = "0.1.0"
+version = "0.2.0"
 description = "FastAPI backend for Taiwan Tradovate (TTX Trader)."
 requires-python = ">=3.12"
 dependencies = [
@@ -28,6 +28,7 @@ dev = [
   "mypy>=1.11.2",
   "pytest>=8.3.2",
   "pytest-asyncio>=0.24.0",
+  "pytest-cov>=6.0.0",
   "ruff>=0.6.3"
 ]
 

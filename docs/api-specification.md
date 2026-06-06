@@ -2,19 +2,36 @@
 
 Base URL: `/api/v1`
 
-## Phase 1 Implemented Endpoints
+## Phase 2 Implemented Endpoints
 
-### `GET /health`
+### `GET /health` and `GET /api/v1/health`
 
-Returns service status.
+Returns broker, Redis, and database health status.
 
 Response:
 
 ```json
 {
-  "status": "ok",
-  "service": "Taiwan Tradovate (TTX Trader)",
-  "environment": "development"
+  "status": "healthy",
+  "shioaji_connected": true,
+  "redis_connected": true,
+  "database_connected": true
+}
+```
+
+### `GET /account` and `GET /api/v1/account`
+
+Returns Shioaji authentication and contract-loading status.
+
+Response:
+
+```json
+{
+  "connected": true,
+  "account_id": "F123456789",
+  "broker": "Sinopac",
+  "person_id": "A123456789",
+  "contracts_loaded": true
 }
 ```
 
@@ -96,7 +113,7 @@ Order create request:
 
 ### Account
 
-`GET /account`
+`GET /account` and `GET /api/v1/account`
 
 ### ATM Templates
 

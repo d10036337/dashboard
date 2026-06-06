@@ -21,7 +21,7 @@ jobs:
       - run: ruff check .
       - run: black --check .
       - run: mypy app tests
-      - run: pytest
+      - run: pytest --cov=app --cov-report=term-missing --cov-fail-under=90
 
   frontend:
     runs-on: ubuntu-latest

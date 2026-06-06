@@ -12,15 +12,15 @@ Commit: `feat: initialize project structure`
 - Add `.env.example`, `.gitignore`, Dockerfiles, docker compose, Nginx config, and GitHub Actions CI.
 - Add baseline health endpoint and frontend application shell tests.
 
-## Phase 2: Authentication
+## Phase 2: Authentication ✅
 
-Commit: `feat: implement shioaji authentication service`
+Commit: `feat: implement shioaji authentication and connection management`
 
-- Implement Shioaji login service.
-- Activate CA certificate using environment-provided CA path and password.
-- Add startup login hook and session manager.
-- Add reconnect watchdog that retries within five seconds after disconnect.
-- Add authentication unit tests using Shioaji test doubles.
+- Implemented Shioaji login service and SDK adapter.
+- Activated CA certificate using environment-provided CA path and password.
+- Added startup login hook, session manager, connection monitor, account endpoint, and dependency health checks.
+- Added reconnect policy with immediate, 5-second, 15-second, and 30-second retry windows.
+- Added unit and integration tests using Shioaji test doubles with 90%+ backend coverage.
 
 ## Phase 3: Historical data
 

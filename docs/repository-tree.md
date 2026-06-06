@@ -17,15 +17,20 @@ taiwan-tradovate/
 │   ├── app/
 │   │   ├── api/
 │   │   │   ├── __init__.py
+│   │   │   ├── auth.py
 │   │   │   ├── health.py
 │   │   │   └── router.py
 │   │   ├── core/
 │   │   │   ├── __init__.py
 │   │   │   ├── config.py
 │   │   │   ├── database.py
-│   │   │   └── logging.py
+│   │   │   ├── exceptions.py
+│   │   │   ├── logging.py
+│   │   │   └── shioaji_client.py
 │   │   ├── dependencies/
-│   │   │   └── __init__.py
+│   │   │   ├── __init__.py
+│   │   │   ├── auth.py
+│   │   │   └── health.py
 │   │   ├── domain/
 │   │   │   └── __init__.py
 │   │   ├── main.py
@@ -35,9 +40,11 @@ taiwan-tradovate/
 │   │   │   └── __init__.py
 │   │   ├── schemas/
 │   │   │   ├── __init__.py
+│   │   │   ├── auth.py
 │   │   │   └── health.py
 │   │   ├── services/
-│   │   │   └── __init__.py
+│   │   │   ├── __init__.py
+│   │   │   └── authentication_service.py
 │   │   ├── utils/
 │   │   │   └── __init__.py
 │   │   ├── websocket/
@@ -51,7 +58,13 @@ taiwan-tradovate/
 │   │       └── .gitkeep
 │   ├── pyproject.toml
 │   └── tests/
-│       └── test_health.py
+│       ├── api/
+│       │   └── test_auth.py
+│       ├── services/
+│       │   └── test_authentication_service.py
+│       ├── test_health.py
+│       ├── test_health_dependencies.py
+│       └── test_shioaji_client.py
 ├── docker/
 │   ├── .gitkeep
 │   ├── nginx.conf
